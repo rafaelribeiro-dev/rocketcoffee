@@ -40,6 +40,31 @@ body {
   background-size: 100% auto;
 }
 
+.button {
+  width: 17.4rem;
+  height: 3.5rem;
+  color: white;
+  background-color: transparent;
+
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+
+  border: 1px solid var(--button);
+  border-radius: 0.6rem;
+
+  text-transform: uppercase;
+  margin: 0 auto;
+  margin-bottom: 8.8rem;
+
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.5s ease;
+}
+
 .wrapper {
   width: 100%;
   /* margin-left: 2.4rem;
@@ -50,7 +75,6 @@ body {
 }
 
 #header {
-  width: 100%;
   margin-bottom: 8rem;
   border-bottom: 1px solid var(--border);
   display: flex;
@@ -58,7 +82,7 @@ body {
   align-items: center;
 }
 
-#header .logo-desktop {
+nav .logo-desktop {
   visibility: hidden;
   display: none;
 }
@@ -159,32 +183,13 @@ nav.show .open-menu {
   margin-bottom: 8.8rem;
 }
 
-button.take-coffee {
-  width: 17.4rem;
-  height: 3.5rem;
-  color: white;
-  background-color: transparent;
-
-  font-size: 1.1rem;
-  font-weight: 700;
-  line-height: 1.5rem;
-
-  border: 1px solid var(--button);
-  border-radius: 0.6rem;
-
-  text-transform: uppercase;
-  margin: 0 auto;
-  margin-bottom: 8.8rem;
-
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  justify-content: center;
-
-  transition: all 0.5s ease;
+.button.desktop {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
 }
 
-button.take-coffee:hover {
+.button:hover {
   background-color: var(--button);
 }
 
@@ -196,16 +201,85 @@ button.take-coffee:hover {
   z-index: -1;
 }
 
-/* ------- DESKTOP -------- */
+/* ========== DESKTOP ========== */
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   body {
-    background-image: url(./assets/blur-1.png), url(./assets/blur-2.png);
+    background: url(./assets/blur-1.png), url(./assets/blur-2.png);
     background-repeat: no-repeat;
     background-position: bottom left, top right;
     background-color: var(--background);
   }
   .wrapper {
-    width: min(112rem, 100%);
+    width: min(116rem, 100%);
+  }
+  #header {
+    padding-top: 5rem;
+    border-bottom: none;
+    margin-bottom: 4rem;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 13rem;
+  }
+
+  nav .logo-mobile {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+
+  nav .logo-desktop {
+    opacity: 1;
+    visibility: visible;
+    display: inline;
+  }
+
+  nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
+
+  nav .menu ul {
+    display: flex;
+    list-style: none;
+  }
+
+  nav .menu ul li,
+  nav .menu ul li a.active::after {
+    border-bottom: 0;
+    content: none;
+  }
+
+  nav .button.desktop {
+    opacity: 1;
+    visibility: visible;
+    margin-bottom: 0;
+    display: flex;
+    margin: 0;
+  }
+
+  nav .open-menu {
+    display: none;
+  }
+
+  /* ========== SEÇÃO CONTEUDO ========== */
+
+  #content h4 {
+    display: none;
+  }
+  #content a.button {
+    display: none;
+  }
+  #content h1 {
+    display: grid;
+    font-size: 10rem;
+    gap: 3rem;
+  }
+  #content .cup-coffee img {
+    max-width: 60%;
   }
 }
