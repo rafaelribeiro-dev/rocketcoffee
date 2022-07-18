@@ -4,7 +4,7 @@
 
 <br>
 
-![Resultado final do projeto]()
+![Resultado final do projeto](https://github.com/rafaelribeiro-dev/rocketcoffee/blob/main/cover.png)
 
 ## 📝 DESCRIÇÃO
 
