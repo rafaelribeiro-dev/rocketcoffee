@@ -1,1 +1,23 @@
-<h1>RocketCoffee</h1>
+<h1 align="center">
+ Desafio RocketCoffee - Rocketseat
+</h1>
+
+<br>
+
+![Resultado final do projeto]()
+
+## 📝 DESCRIÇÃO
+
+Desafio do curso [Discover](https://app.rocketseat.com.br/discover) da Rocketseat. </br></br>
+
+Live Preview [RocketCoffee](https://rafaelribeiro-dev.github.io/rocketcoffee/)
+
+## 🚀 TECNOLOGIAS
+
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+- HTML
+- CSS
+- JavaScript
+
+---
